@@ -55,7 +55,7 @@ function SignupForm() {
                         title: <p>Registered successfully</p>,
                         icon: 'success',
                       }).then(() => {
-                        navigate("/login");
+                        navigate("/profile");
                       })
                 }
 			} catch (err) {
