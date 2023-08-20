@@ -16,10 +16,13 @@ function FIlterSection() {
                 className="relative">
                 <button
                     onClick={toggleFilter}
-                    className="flex items-center w-full mx-auto text-white bg-[#464646] px-4 py-2 rounded-xl hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-300"
+                    className="flex items-center w-full mx-auto text-white bg-[#464646] px-4 py-1 mt-2 rounded-xl hover:bg-gray-600 focus:outline-none focus:ring focus:ring-gray-300"
                 >
                     <span>Filter</span>
-                    <TuneIcon style={{ marginLeft: 'auto' }} />
+                    <TuneIcon style={{
+                        marginLeft: 'auto',
+                        width: '20px', height: '20px'
+                    }} />
                 </button>
                 {isFilterOpen && (
                     <div
