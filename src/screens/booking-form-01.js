@@ -1,10 +1,10 @@
 import React from 'react';
 import '../styles/Auth.css';
-import WhiteButton from '../components/Common/white_button';
+import WhiteButton from '../components/Common/white-button';
 import BookingStatus1 from '../assets/booking/Booking Status 1.png'
-import GrayTextInputField from '../components/Common/gray_text_input';
-import DropdownInputField from '../components/Common/dropdown_input_field';
-import GrayButton from '../components/Common/gray_button';
+import GrayTextInputField from '../components/Common/gray-text-input';
+import DropdownInputField from '../components/Common/dropdown-input-field';
+import GrayButton from '../components/Common/gray-button';
 
 function BookingFirstPhase() {
     return (

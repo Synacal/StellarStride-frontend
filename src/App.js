@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LoginPage from "./screens/login_page";
-import SignupPage from './screens/signup_page';
+import LoginPage from "./screens/login-page";
+import SignupPage from './screens/signup-page';
 import AppBarComponent from './components/Common/appbar';
-import ProfilePage from './screens/profile_page';
-import BookingFirstPhase from './screens/booking_form_01';
-import BookingSecondPhase from './screens/booking_form_02';
-import BookingThirdPhase from './screens/booking_form_03';
+import ProfilePage from './screens/profile-page';
+import BookingFirstPhase from './screens/booking-form-01';
+import BookingSecondPhase from './screens/booking-form-02';
+import BookingThirdPhase from './screens/booking-form-03';
 
 function App() {
   const user = true
