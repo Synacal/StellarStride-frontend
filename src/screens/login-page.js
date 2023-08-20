@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/Auth.css';
-import SignupForm from '../components/Auth/Signup/signup_page';
+import LoginForm from '../components/Auth/Login/login-form';
 
-function SignupPage() {
+function LoginPage() {
     return (
         <div className="flex h-screen">
             {/* Desktop View */}
@@ -21,8 +21,8 @@ function SignupPage() {
 
             <div className="hidden md:flex md:w-1/2 bg-[#656565] px-8 justify-center items-center h-screen">
                 <div className='w-full'>
-                    <h2 className="text-2xl font-sans mb-12 text-white text-center">Say Hello To Space!</h2>
-                    <SignupForm />
+                    <h2 className="text-2xl font-sans mb-12 text-white text-center">Welcome Back!</h2>
+                    <LoginForm />
                 </div>
             </div>
 
@@ -39,8 +39,8 @@ function SignupPage() {
                 </div>
 
                 <div className="h-3/4 w-full p-8 rounded-2xl bg-gradient-to-b from-[#006B72] to-[rgba(0, 0, 0, 0.15)] md:bg-gradient-to-b md:from-[#006B72] md:to-[#000000] flex-grow">
-                    <h2 className="text-2xl font-sans mb-12 text-white text-center">Say Hello To Space!</h2>
-                    <SignupForm />
+                    <h2 className="text-2xl font-sans mb-12 text-white text-center">Welcome Back!</h2>
+                    <LoginForm />
                 </div>
             </div>
 
@@ -48,4 +48,4 @@ function SignupPage() {
     );
 }
 
-export default SignupPage;
+export default LoginPage;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-import TextInputField from '../../Common/text_input_field';
-import GreenButton from '../../Common/green_button';
+import TextInputField from '../../Common/text-input-field';
+import GreenButton from '../../Common/green-button';
 
 function LoginForm() {
     const navigate = useNavigate()

@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from '@mui/material/Avatar';
 import '../styles/Auth.css';
-import WhiteButton from '../components/Common/white_button';
+import WhiteButton from '../components/Common/white-button';
 import AvatarImg from '../assets/profile/avatar.png'
 
 function ProfilePage() {
