@@ -59,7 +59,10 @@ function SignupForm() {
                       })
                 }
 			} catch (err) {
-				// display error toast
+                MySwal.fire({
+                    title: <p>Registration failed!</p>,
+                    icon: 'error',
+                  })
 			}
 		}
 	};
