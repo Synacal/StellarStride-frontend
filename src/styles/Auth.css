@@ -6,3 +6,7 @@
 .bg-booking-image {
     background-image: url('../assets/booking/booking_form_bg.png');
 }
+
+.bg-explore-image {
+    background-image: url('../assets/explore/ExploreBG.png');
+}
