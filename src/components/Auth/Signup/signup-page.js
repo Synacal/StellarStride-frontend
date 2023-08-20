@@ -48,7 +48,7 @@ function SignupForm() {
 			};
 			try {
 				const response = await axios.post('http://localhost:8080/auth/register', user);
-                console.log(response.data.token)
+                
                 if(200 == response.status){
                     localStorage.setItem("token", response.data.token);
                     MySwal.fire({
