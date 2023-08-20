@@ -1,0 +1,8 @@
+.bg-login-image {
+    background-image: url('../assets/auth/auth_bg.png');
+    /* Add your background image path here */
+}
+
+.bg-booking-image {
+    background-image: url('../assets/booking/booking_form_bg.png');
+}
