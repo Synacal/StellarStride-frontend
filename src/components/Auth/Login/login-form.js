@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TextInputField from '../../Common/text-input-field';
 import GreenButton from '../../Common/green-button';
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
 import axios from 'axios';
 
 function LoginForm() {
 	const navigate = useNavigate();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-    const MySwal = withReactContent(Swal)
+	const mySwal = withReactContent(Swal);
 
 	const handleEmailChange = (event) => {
 		setEmail(event.target.value);
@@ -21,14 +21,13 @@ function LoginForm() {
 	};
 
 	const handleLoginFormSubmit = async (event) => {
-		event.preventDefault();
-
-		event.preventDefault();
+		event?.preventDefault();
 
 		const user = {
 			email: email,
 			password: password,
 		};
+
 		try {
 			const response = await axios.post(
 				'http://localhost:8080/auth/login',
@@ -37,15 +36,17 @@ function LoginForm() {
 
 			if (200 == response.status) {
 				localStorage.setItem('token', response.data.token);
-				MySwal.fire({
-					title: <p>Logged in successfully</p>,
-					icon: 'success',
-				}).then(() => {
-					navigate('/profile');
-				});
+				mySwal
+					.fire({
+						title: <p>Logged in successfully</p>,
+						icon: 'success',
+					})
+					.then(() => {
+						navigate('/profile');
+					});
 			}
 		} catch (err) {
-			MySwal.fire({
+			mySwal.fire({
 				title: <p>Login failed!</p>,
 				icon: 'error',
 			});
