@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import TextInputField from '../../Common/text-input-field';
 import GreenButton from '../../Common/green-button';
 import axios from 'axios';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+
+
 
 function SignupForm() {
 	const navigate = useNavigate();
@@ -10,8 +14,11 @@ function SignupForm() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [confirmPassword, setConfirmPassword] = useState('');
+    
 
-	const handleNameChange = (event) => {
+    const MySwal = withReactContent(Swal)
+	
+    const handleNameChange = (event) => {
 		setName(event.target.value);
 	};
 
@@ -41,12 +48,16 @@ function SignupForm() {
 			};
 			try {
 				const response = await axios.post('http://localhost:8080/auth/register', user);
-
+                console.log(response.data.token)
                 if(200 == response.status){
-                    //display success toast
+                    localStorage.setItem("token", response.data.token);
+                    MySwal.fire({
+                        title: <p>Registered successfully</p>,
+                        icon: 'success',
+                      }).then(() => {
+                        navigate("/login");
+                      })
                 }
-
-                navigate("/login");
 			} catch (err) {
 				// display error toast
 			}
