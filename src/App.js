@@ -8,7 +8,7 @@ import BookingSecondPhase from './screens/booking-form-02';
 import BookingThirdPhase from './screens/booking-form-03';
 
 function App() {
-  const user = false
+  const user = true
   return (
     <div>
       <Router>
